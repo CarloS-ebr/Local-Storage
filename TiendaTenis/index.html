@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TenisTienda | Login</title>
+    <link rel="icon" href="./src/assets/icon/logo.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <main class="login-background d-flex align-items-center justify-content-center">
+        <div class="card login-card shadow-lg">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <i class="fas fa-shoe-prints fa-3x text-primary mb-2"></i>
+                    <h2 class="fw-bold">Bienvenido a TenisTienda</h2>
+                    <p class="text-muted">Inicia sesión para continuar</p>
+                </div>
+
+                <form id="loginForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="txtEmail" class="form-label">Correo electrónico</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" id="txtEmail" class="form-control" placeholder="ejemplo@correo.com"
+                                required>
+                            <div class="invalid-feedback">Correo inválido</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="idPassword" class="form-label">Contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" id="idPassword" class="form-control" placeholder="********" required>
+                            <div class="invalid-feedback">Contraseña requerida</div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="termsCheck" required />
+                        <label for="termsCheck" class="form-check-label">Acepto los términos y condiciones</label>
+                        <div class="invalid-feedback">Debes aceptar</div>
+                    </div>
+
+                    <div class="alert alert-danger d-none" id="loginError">
+                        <i class="fas fa-exclamation-triangle me-2"></i> Correo o contraseña incorrectos.
+                    </div>
+
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
+                        <button type="button" class="btn btn-outline-light" id="btnRegistry">Registrarse</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/js/login.js"></script>
+</body>
+
+</html>

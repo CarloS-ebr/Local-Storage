@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(204, 247, 195);
+    height: 100vh;
+    /* Aseguramos que el body ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    width: 350px;
+    /* Ancho fijo del formulario */
+    padding: 20px;
+    /* Espaciado dentro del formulario */
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil para resaltar */
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* Espacio entre los elementos del formulario */
+}
+
+.Usuario {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.Usuario input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4c8bf5;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3a6fc2;
+}
+
+.recordar {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.recordar a,
+.registrarse a {
+    text-decoration: none;
+    color: #4c8bf5;
+}
+
+.recordar a:hover,
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100vw;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.menu {
+    width: 90%;
+    background-color: #343a40;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.menu button {
+    flex-grow: 1;
+    margin: 0 10px;
+    font-size: 24px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+/* Aseguramos que el formulario esté bien centrado */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo del formulario de login */
+form {
+    background-color: #18c9c9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 490px;
+    /* Evitar que el formulario se expanda demasiado */
+}
+
+/* Estilo de las etiquetas */
+label {
+    font-weight: bold;
+}
+
+/* Estilo de los botones */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-background {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    background-size: cover;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 90%;
+    animation: slideUp 0.8s ease-out;
+}
+
+.login-card h2 {
+    color: #2c3e50;
+}
+
+.input-group-text {
+    background-color: #f0f0f0;
+    border-right: 0;
+}
+
+.input-group .form-control {
+    border-left: 0;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-outline-light {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.btn-outline-light:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+.alert {
+    font-size: 0.9rem;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el contenedor de los botones */
+.menu-lateral {
+    padding: 20px;
+    background-color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Estilo personalizado para los botones */
+.btn-custom {
+    background-color: #0062cc;
+    /* Azul oscuro */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin: 10px 0;
+    width: 80%;
+}
+
+/* Efecto al pasar el ratón */
+.btn-custom:hover {
+    background-color: #004a99;
+    /* Azul más oscuro */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de enfoque (focus) para accesibilidad */
+.btn-custom:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.5);
+}
