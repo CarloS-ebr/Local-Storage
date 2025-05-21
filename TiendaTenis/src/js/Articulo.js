@@ -18,3 +18,47 @@ export default class Articulo {
         return "Sin tipo";
     }
 }
+/*
+export default class persona {
+
+    constructor() {
+
+        this.idArticulo = 0;
+        this.marca = null;
+        this.precio = null;
+        this.color = 0;
+        this.talla = null;
+        this.stock = null;
+        this.disponible = null;
+        this.tipoProducto = null;
+        this.fechaLlegada = null;
+
+    }
+
+    set setIdArticulo(idPersona) {
+        this.idPersona = idPersona;
+    }
+    set setNombre(nombre) {
+        this.nombre = nombre;
+    }
+    set setApellidos(apellido) {
+        this.apellido = apellido;
+    }
+    set setEdad(edad) {
+        this.edad = edad;
+    }
+    get getIdPersona() {
+        return this.idPersona;
+    }
+    get getNombre() {
+        return this.nombre;
+    }
+    get getApellidos() {
+        return this.apellido;
+    }
+    get getEdad() {
+        return this.edad;
+    }
+
+} 
+*/

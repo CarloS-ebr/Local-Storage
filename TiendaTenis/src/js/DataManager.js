@@ -1,13 +1,26 @@
 export default class DataManager {
-    constructor(keySession) {
-        this.keySession = keySession;
-        let storedData = sessionStorage.getItem(this.keySession);
+    constructor(keyStorage) {
+        this.keyStorage = keyStorage;
+        this.db = this.loadFromStorage();
+    }
 
+    loadFromStorage() {
         try {
-            this.dbSession = JSON.parse(storedData) || [];
+            const storedData = localStorage.getItem(this.keyStorage);
+            return storedData ? JSON.parse(storedData) : [];
         } catch (error) {
-            console.error("Error al parsear los datos de sessionStorage:", error);
-            this.dbSession = [];
+            console.error("Error al cargar datos:", error);
+            return [];
+        }
+    }
+
+    saveToStorage() {
+        try {
+            localStorage.setItem(this.keyStorage, JSON.stringify(this.db));
+            return true;
+        } catch (error) {
+            console.error("Error al guardar datos:", error);
+            return false;
         }
     }
 
@@ -19,13 +32,13 @@ export default class DataManager {
             console.error("Se requiere un objeto artículo válido.");
             return;
         }
-        this.dbSession.push(objArticulo);
-        this.saveToSession();
+        this.db.push(objArticulo);
+        this.saveToStorage();
     }
 
     // READ
     readData() {
-        return this.dbSession;
+        return this.db;
     }
 
     // UPDATE
@@ -35,14 +48,14 @@ export default class DataManager {
             return;
         }
 
-        this.dbSession = this.dbSession.map((articulo) => {
+        this.db = this.db.map((articulo) => {
             if (articulo.id === id) {
                 return { ...articulo, ...newArticulo };
             }
             return articulo;
         });
 
-        this.saveToSession();
+        this.saveToStorage();
     }
 
     // DELETE
@@ -52,22 +65,13 @@ export default class DataManager {
             return;
         }
 
-        this.dbSession = this.dbSession.filter((articulo) => articulo.id !== idArticulo);
-        this.saveToSession();
+        this.db = this.db.filter((articulo) => articulo.id !== idArticulo);
+        this.saveToStorage();
     }
 
     // CLEAR
     clearDB() {
-        sessionStorage.removeItem(this.keySession);
-        this.dbSession = [];
-    }
-
-    // Helper function to save data to sessionStorage
-    saveToSession() {
-        if (typeof sessionStorage !== "undefined") {
-            sessionStorage.setItem(this.keySession, JSON.stringify(this.dbSession));
-        } else {
-            console.error("sessionStorage no está disponible");
-        }
+        localStorage.removeItem(this.keyStorage);
+        this.db = [];
     }
 }
